@@ -1,0 +1,11 @@
+{{/* use the os-detect javascript if required */}}
+{{- $shortcodes := slice "os-detect-hide" -}}
+{{- $loadInit := false -}}
+{{- range $sc := $shortcodes -}}
+{{-   if $.Page.HasShortcode $sc -}}
+{{-     $loadInit = true -}}
+{{-   end -}}
+{{- end -}}
+{{- if $loadInit -}}
+{{-   partial "os-detect-init.html" (dict "page" $.Page "site" .Site) -}}
+{{- end -}}

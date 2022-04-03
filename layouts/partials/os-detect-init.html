@@ -1,0 +1,4 @@
+{{- $osdetectCss := resources.Get "css/os-detect.css" | postCSS | minify | fingerprint -}}
+{{- $osdetectJs := resources.Get "js/os-detect.js" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $osdetectCss.Permalink }}" integrity="{{ $osdetectCss.Data.Integrity }}" crossorigin="anonymous" />
+<script type="text/javascript" src="{{ $osdetectJs.Permalink }}" integrity="{{ $osdetectJs.Data.Integrity }}" crossorigin="anonymous"></script>

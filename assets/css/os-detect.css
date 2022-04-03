@@ -1,0 +1,115 @@
+.os_detect_hidden {
+  display: none;
+}
+
+.os_detect_visible {
+  /* oddly a 'display: unset;' here messes up the table columns */
+}
+
+.os_detect_nodisplay {
+  display: none;
+}
+
+/* transition the width of the columns */
+tr.os_detect_tr.os_detect_hiding td:nth-child(n+2):last-of-type .cell_content,
+tr.os_detect_tr.os_detect_hiding td:nth-child(n+2):last-of-type
+{
+  max-width: 0rem !important;
+  transition: all 0.3s linear;
+}
+
+tr.os_detect_tr.os_detect_unhiding td:nth-child(n+2):last-of-type .cell_content,
+tr.os_detect_tr.os_detect_unhiding td:nth-child(n+2):last-of-type
+{
+  max-width: 100% !important;
+  transition: all 0.3s linear;
+}
+
+tr.os_detect_tr.os_detect_hiding,
+tr.os_detect_tr.os_detect_hiding td,
+tr.os_detect_tr.os_detect_hiding .cell_content
+{
+  max-height: 0 !important;
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+tr.os_detect_tr.os_detect_unhiding,
+tr.os_detect_tr.os_detect_unhiding td,
+tr.os_detect_tr.os_detect_unhiding .cell_content
+{
+  max-height: 4.5rem !important;
+  height: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.os_detect_rotate.os_detect_toggle_all {
+  transform: rotate(0turn);
+  transition: all 0.3s linear;
+}
+
+.os_detect_rotate.os_detect_toggle_not_all {
+  transform: rotate(-0.5turn);
+  transition: all 0.3s linear;
+}
+
+button.os_detect_button {
+  border: none !important;
+  background: inherit;
+}
+
+button.os_detect_button:hover {
+  background: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button.os_detect_viewall_button {
+  border: none !important;
+  background: inherit;
+  text-decoration: underline;
+}
+
+.os_detect_message td {
+  background: var(--grey-lighter-lighter);
+  color: black;
+  text-align: center;
+  font-size: 90%;
+}
+
+/**** leave these "marker" classes blank ****/
+.os_detect_transition,
+.os_detect_hiding,
+.os_detect_unhiding,
+.os_detect_visible_toggle,
+.os_detect_toggle_all,
+.os_detect_toggle_not_all,
+.os_detect_any,
+.os_detect_all,
+.os_detect_not_all,
+.os_detect_alltoggle,
+.os_detect_count,
+.os_detect_count_view,
+.os_detect_ignore,
+.os_detect_osId,
+.os_detect_osName,
+.os_detect_osCount,
+.os_detect_plural,
+.os_detect_singular,
+.os_detect_tr,
+.os_detect_instant,
+.os_detect_linux,
+.os_detect_macos,
+.os_detect_unix,
+.os_detect_windows {
+}
